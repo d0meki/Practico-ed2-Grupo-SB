@@ -10,26 +10,18 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.lang.reflect.Array;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import static javax.swing.text.html.HTML.Tag.P;
 import negocio.AVL;
-import negocio.ArbolBinarioBusqueda;
+import negocio.MostrarArbol;
 import negocio.Producto;
-import negocio.Productos;
 
-/**
- *
- * @author user
- */
-public class SistemaDeProductosCrudConArboles {
+public class SistemaDeProductosCrudConArboles{
 
     
     public static void main(String[] args) throws IOException {
         // TODO code application logic here
-        AVL <Integer, String, Double> edArbol = new AVL<>();
+        AVL <Double, String, Double> edArbol = new AVL<>();
         
         String json = "";
         try {
@@ -45,15 +37,20 @@ public class SistemaDeProductosCrudConArboles {
             Logger.getLogger(SistemaDeProductosCrudConArboles.class.getName()).log(Level.SEVERE, null, ex);
         }      
         Gson gson = new Gson();
-        Producto[] producto = gson.fromJson(json, Producto[].class);
-         
-        for (Producto p: producto) {
-            System.out.println(p);
+        
+        Producto<Integer,String,Double>[] producto = gson.fromJson(json, Producto[].class);
+        
+        for (Producto p: producto) {       
+            edArbol.insertar((Double)p.getClave(), (String)p.getNombre(),(Double) p.getPrecio());
         }
+        MostrarArbol m = new MostrarArbol(edArbol);
+        System.out.println(m.ImprimirArbol()); 
         System.out.println(edArbol.recorridoEnPorNiveles());
+        
+        
+        
        
-        
-        
+      
 //        edArbol.insertar(40, "Honda CR-V 2021", 6000.0);
 //        edArbol.insertar(50, "Honda HR-V 2021", 7000.0);
 //        edArbol.insertar(30, "Honda Civic Type R", 8000.0);

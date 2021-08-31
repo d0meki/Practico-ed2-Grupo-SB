@@ -17,7 +17,7 @@ public class EditForm extends javax.swing.JFrame {
     /**
      * Creates new form EditForm
      */
-    AVL <Integer, String, Double> edArbol = new AVL<>();
+    AVL <Double, String, Double> edArbol = new AVL<>();
     public EditForm(AVL arbol,Producto p) {
         initComponents();
         setLocationRelativeTo(null);
@@ -146,7 +146,7 @@ public class EditForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        int ID = Integer.parseInt(jLabel4.getText());
+        Double ID = Double.parseDouble(jLabel4.getText());
         String Nombre = jTextField1.getText();
         double Precio = Double.parseDouble(jTextField2.getText());       
         edArbol.insertar(ID, Nombre, Precio);  

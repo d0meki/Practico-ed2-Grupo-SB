@@ -87,7 +87,10 @@ public class Producto<K,V,P>{
    public static Producto<?,?,?> nodoVacio(){// y va acompañado de este metodo
        return null;
    }
-
+   
+   
+   
+   
     @Override
     public String toString() {
         return "Producto{" + "clave=" + clave + ", nombre=" + nombre + ", precio=" + precio+ '}';

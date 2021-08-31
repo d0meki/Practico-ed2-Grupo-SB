@@ -1,17 +1,36 @@
 [{
-	"clave": 25,
-	"nombre": "Producto 1",
-	"precio": 25.9
+	"clave": 40,
+	"nombre": "Honda CR-V 2021",
+	"precio": 22999.99
 },
 {
-	"clave": 40,
-	"nombre": "Producto 2",
-	"precio": 89.2
+	"clave": 50,
+	"nombre": "Honda HR-V 2021",
+	"precio": 25444.50
 },
 {
 	"clave": 30,
-	"nombre": "Producto 3",
-	"precio": 200
+	"nombre": "Honda Civic Type R",
+	"precio": 18000.10
+},
+{
+	"clave": 28,
+	"nombre": "Honda CR-V Hybrid",
+	"precio": 19999.99
+},
+{
+	"clave": 35,
+	"nombre": "Honda Pilot",
+	"precio": 15000.25
+},
+{
+	"clave": 48,
+	"nombre": "Honda Passport",
+	"precio": 12499.90
+},
+{
+	"clave": 51,
+	"nombre": "Honda Civic Sedan",
+	"precio": 10000.00
 }
-
 ]

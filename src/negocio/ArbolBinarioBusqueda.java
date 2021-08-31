@@ -51,18 +51,19 @@ public class ArbolBinarioBusqueda <K extends Comparable<K>,V,P>{
         }   
 
     }
-    /* public int altura(){
+    
+     public int altura(){
         if (this.esArbolVacio()) {
             return 0;
         }
         int alturaDelArbol = 0;
-        Queue<NodoBinario<K,V>> colaDeNodos = new LinkedList<>();
+        Queue<Producto<K,V,P>> colaDeNodos = new LinkedList<>();
         colaDeNodos.offer(this.raiz);//si no es vacio empieza con el nodo raiz--offer inserta un elemento a la cola
         while(!colaDeNodos.isEmpty()){//iteramos sobre la cola
             int cantidadDeNodosEnLaCola = colaDeNodos.size();// para controlar la cantidad de nodos 
             int i =0;//que habia con el bucle principal
             while(i<cantidadDeNodosEnLaCola){
-                NodoBinario<K,V> nodoActual = colaDeNodos.poll();
+                Producto<K,V,P> nodoActual = colaDeNodos.poll();
                 if (!nodoActual.esVacioHijoIzquierdo()) {
                 colaDeNodos.offer(nodoActual.getHijoIzquierdo());
                 }
@@ -75,7 +76,7 @@ public class ArbolBinarioBusqueda <K extends Comparable<K>,V,P>{
         }
         return alturaDelArbol;
     }
-    */
+    
    public boolean esArbolVacio() {
         return Producto.esNodoVacio(this.raiz);
     }
